@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, validator, root_validator
+from pydantic import BaseModel, Field, validator, model_validator
 from typing import Dict, List, Optional, Union, Any
 from datetime import datetime
 from enum import Enum
@@ -52,17 +52,17 @@ class QueryResult(BaseModel):
 
 class MemoryItem(BaseModel):
     content: Union[str, Dict[str, Any]]
-    memory_type: str = Field(..., regex='^(sensory|working|episodic|semantic)$')
+    memory_type: str = Field(..., pattern='^(sensory|working|episodic|semantic)$')
     timestamp: datetime = Field(default_factory=datetime.utcnow)
     importance: float = Field(..., ge=0.0, le=1.0)
     
-    @root_validator
-    def validate_content(cls, values):
-        content = values.get('content')
+    @model_validator(mode='after')
+    def validate_content(self) -> 'MemoryItem':
+        content = self.content
         if isinstance(content, dict):
             if not all(isinstance(k, str) for k in content.keys()):
                 raise ValueError('All dictionary keys must be strings')
-        return values
+        return self
 
 class PlanningStep(BaseModel):
     task: str = Field(..., min_length=1)

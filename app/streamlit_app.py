@@ -5,8 +5,8 @@ import plotly.graph_objects as go
 import networkx as nx
 import pandas as pd
 from ksa import KnowledgeSynthesisAgent
-from knowledge_graph import KnowledgeGraph, KnowledgeTriple
-from external_tools import ExternalToolRegistry
+from ksa.knowledge_graph import KnowledgeGraph, KnowledgeTriple
+from ksa.external_tools import ExternalToolRegistry, ToolType
 from ksa.validation.schemas import (
     KnowledgeTriple, QueryResult, ConfidenceScore,
     ToolType, ValidationError

@@ -71,8 +71,7 @@ An advanced agentic AI system that combines multi-modal reasoning, hierarchical 
 
 ## Installation
 
-1. Create and activate virtual environment: 
-```
+1. Create and activate virtual environment:
 
 ### Code Style
 - Follow PEP 8 guidelines

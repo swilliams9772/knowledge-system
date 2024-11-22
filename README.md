@@ -158,16 +158,7 @@ If you use this project in your research, please cite:
   url = {https://github.com/yourusername/ksa}
 }
 ```
-```
 
-This expanded README provides:
-1. Detailed component descriptions
-2. Clear installation instructions
-3. Comprehensive usage examples
-4. Development guidelines
-5. Troubleshooting help
-6. API documentation
-7. References and citations
-8. Configuration details
-9. Testing instructions
-10. Project structure visualization
+## Interactive Demo
+
+You can try out the Knowledge Synthesis Agent using our Streamlit app:

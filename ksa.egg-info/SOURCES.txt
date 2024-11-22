@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+ksa.egg-info/PKG-INFO
+ksa.egg-info/SOURCES.txt
+ksa.egg-info/dependency_links.txt
+ksa.egg-info/requires.txt
+ksa.egg-info/top_level.txt

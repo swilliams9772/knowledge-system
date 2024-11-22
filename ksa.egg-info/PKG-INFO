@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ksa
+Version: 0.1.0
+Requires-Dist: langchain>=0.1.0
+Requires-Dist: openai>=1.0.0
+Requires-Dist: torch>=2.0.0
+Requires-Dist: transformers>=4.30.0
+Requires-Dist: networkx>=3.0
+Requires-Dist: rdflib>=6.0.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: plotly>=5.0.0
+Requires-Dist: streamlit>=1.25.0
+Requires-Dist: torch-geometric>=2.3.0
+Requires-Dist: wolframalpha>=5.0.0
+Requires-Dist: requests>=2.31.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: pre-commit>=3.0.0; extra == "dev"

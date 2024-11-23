@@ -20,7 +20,13 @@ class KnowledgeSynthesisAgent:
         self.monitor = PerformanceMonitor()
         
         # Initialize cache manager
-        self.cache_manager = CacheManager(CacheConfig())
+        self.cache_manager = CacheManager(
+            CacheConfig(
+                semantic_threshold=0.7,
+                cache_ttl=3600,
+                max_cache_size=10000
+            )
+        )
 
     def process_query(self, user_input: str) -> Dict[str, Any]:
         """Process user query with caching and monitoring"""

@@ -217,7 +217,13 @@ elif mode == "Tool Integration":
             query = st.text_input("Search Query:")
             if st.button("Search"):
                 with st.spinner("Searching..."):
-                    results = asyncio.run(tools.get_tool("searxng").search(query))
+                    # Create event loop and run search
+                    loop = asyncio.new_event_loop()
+                    asyncio.set_event_loop(loop)
+                    results = loop.run_until_complete(tools.get_tool("searxng").search(query))
+                    loop.close()
+                    
+                    # Display results
                     for result in results.data[:5]:
                         st.write(f"- [{result['title']}]({result['url']})")
                         

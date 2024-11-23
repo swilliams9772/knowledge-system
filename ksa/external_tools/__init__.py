@@ -54,7 +54,7 @@ class SearchTool(BaseTool):
                 {'title': 'Sample Result 1', 'url': 'https://example.com/1'},
                 {'title': 'Sample Result 2', 'url': 'https://example.com/2'}
             ]
-        })
+        })()
 
 class WikidataTool(BaseTool):
     def query(self, sparql_query):
